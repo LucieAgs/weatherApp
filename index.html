@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+		/>
+		<link href="style.css" />
+		<script src="https://kit.fontawesome.com/fb99498391.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container ol d-flex justify-content-center" id="app">
+      <div class="card d-flex justify-content-center">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-end" id="dayTemperature"><span id="minTemp">15</span>°|<span id="maxTemp"> 25</span>°</div>
+
+						<div class="row" id="searchbar">
+	<div class="col-7">
+		<form id="citySubmit">
+			<div class="input-group mb-2">
+				<input type="search" id="city-input" class="form-control" autofocus="on" autocomplete="off" placeholder="Enter a city">
+				<input type="submit" class="button" value="search">
+				<!-- <div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+				</div> -->
+			</div>
+		
+	</div>		
+			</div>
+
+</form>
+
+					</div>
+					
+<div class="row">
+			<div class="col d-flex justify-content-center">
+				<h1 id="city">Amsterdam</h1>
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="button" id="location">📍</button>
+				</div>
+			</div>
+		</div>    
+<div class="row">
+	<div class="col d-flex justify-content-center" id="icon">🌤</div>
+
+</div>
+<div class="row">
+		<div class="col d-flex justify-content-center temperature" id="temperatures"> <span class="temperature" id="liveTemperature">
+			24
+			</span><span class="units">
+			<a href="#" id="celsius-link" class="links active">
+				°C
+			</a>
+			/
+			<a href="#" id="fahrenheit-link" class="links">
+				°F
+			</a>
+		</span></div>
+	</div>
+	<div class="row">
+			<div class="col d-flex justify-content-center">
+				<h2 id="description">Sunny</h2>
+			</div>
+		</div> 
+	<!-- <div class="row">
+			<div class="col d-flex justify-content-center">
+				<h1 id="city">Amsterdam</h1>
+			</div>
+		</div>          -->
+		<div class="row">
+				<div class="col d-flex justify-content-center" id="today">Friday 14:30</div>
+			</div>  
+			
+			<div class="row">
+				<div class="col d-flex justify-content-center">Humidity</div>
+				<div class="col d-flex justify-content-center">Wind</div>
+				<div class="col d-flex justify-content-center">Feeling like</div>
+			</div>
+			<div class="row" id="liveData">
+					<div class="col d-flex justify-content-center"><span id="humidity">10</span>%</div>
+					<div class="col d-flex justify-content-center"><span id="wind">15</span>km/h</div>
+					<div class="col d-flex justify-content-center"><span id="feeling">23</span>°</div>
+				</div>
+			<div class="row d-flex justify-content-end" id="temperatureForecast">
+					<div class="col d-flex justify-content-center">14°/26°</div>
+					<div class="col d-flex justify-content-center">12°/22°</div>
+					<div class="col d-flex justify-content-center">15°/28°</div>
+					<div class="col d-flex justify-content-center">12°/24°</div>
+					<div class="col d-flex justify-content-center">11°/23°</div>
+				</div> 
+				<div class="row d-flex justify-content-end" id="iconsForecast">
+					<div class="col d-flex justify-content-center">☀️</div>
+					<div class="col d-flex justify-content-center">🌤</div>
+					<div class="col d-flex justify-content-center">☀️</div>
+					<div class="col d-flex justify-content-center">⛅️</div>
+					<div class="col d-flex justify-content-center">☀️</div>
+				</div> 
+				<div class="row d-flex justify-content-end" id="daysForecast">
+					<div class="col d-flex justify-content-center">Sat</div>
+					<div class="col d-flex justify-content-center">Sun</div>
+					<div class="col d-flex justify-content-center">Mon</div>
+					<div class="col d-flex justify-content-center">Tue</div>
+					<div class="col d-flex justify-content-center">Wed</div>
+				</di>
+          </div>
+        </div>
+			</div>
+			
+    </div>
+		
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

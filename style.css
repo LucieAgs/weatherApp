@@ -1,0 +1,74 @@
+body {
+  font-family: sans-serif;
+  padding: 30px;
+  margin: 10px;
+  background-color: #e3f6f5;
+}
+.card {
+  border: none;
+  position: absolute;
+  max-width: 80%;
+  border-radius: 50px;
+}
+
+.card-body {
+  background-color: #b3e9e9;
+  color: white;
+  height: 40rem;
+  border-radius: 50px;
+}
+
+.button {
+  background-color: #b3e9e9;
+  color: grey;
+  border-radius: 10px;
+  border: grey 0.1mm thin;
+}
+#location {
+  font-size: 15px;
+  border: none;
+  padding: 0;
+}
+
+#dayTemperature {
+  font-size: 20px;
+  padding-right: 20px;
+}
+#icon {
+  font-size: 70px;
+}
+.links {
+  text-decoration: none;
+  color: white;
+}
+.links:hover {
+  color: grey;
+  transition: 2ms ease-in-out;
+}
+#temperatures {
+  font-size: 40px;
+}
+
+#city {
+  font-size: 40px;
+  margin: 10px;
+}
+#today {
+  font-size: 18px;
+  padding-bottom: 25px;
+}
+#temperatureForecast {
+  margin: 20px 0px;
+  font-size: 18px;
+  position: static;
+  bottom: 0;
+}
+#iconsForecast {
+  margin: 20px 0px;
+  font-size: 30px;
+}
+#daysForecast {
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 18px;
+}
