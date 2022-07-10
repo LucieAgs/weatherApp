@@ -44,6 +44,8 @@ function displayWeatherConditions(response) {
   document.querySelector("#feeling").innerHTML = Math.round(
     response.data.main.feels_like
   );
+
+  celsiusTemperature = Math.round(response.data.main.temp);
 }
 
 function submitForm(event) {
@@ -54,28 +56,27 @@ function submitForm(event) {
   console.log(apiUrl);
   axios.get(apiUrl).then(displayWeatherConditions);
 }
+
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#liveTemperature");
+  liveTemperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#liveTemperature");
+  temperatureElement.innerHTML = celsiusTemperature;
+}
+
+let celsiusTemperature = null;
+
 let searchForm = document.querySelector("#citySubmit");
 searchForm.addEventListener("submit", submitForm);
 
-// function showFahrenheitTemperature(event) {
-//   event.preventDefault();
-//   let temperatureElement = document.querySelector("#liveTemperature");
-//   celsiusLink.classList.add("active");
-//   fahrenheitLink.classList.remove("active");
-//   let fahrenheitTemperature = (Math.round(
-//     response.data.main.temp) * 9) / 5 + 32;
-//   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-// }
-// let fahrenheitLink = document.querySelector("#fahrenheit-link");
-// fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
 
-// function showCelsiusTemperature(event) {
-//   event.preventDefault();
-//   let temperatureElement = document.querySelector("#liveTemperature");
-//   celsiusLink.classList.remove("active");
-//   fahrenheitLink.classList.add("active");
-//   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-// }
-// let celsiusTemperature = Math.round(response.data.main.temp);
-// let celsiusLink = document.querySelector("#celsius-link");
-// celsiusLink.addEventListener("click", showCelsiusTemperature);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
