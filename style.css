@@ -42,9 +42,20 @@ body {
   color: white;
 }
 .links:hover {
-  color: grey;
+  color: #ffebbb;
   transition: 2ms ease-in-out;
 }
+
+#temperatures .active {
+  color: #ffebbb;
+  cursor: default;
+}
+
+#temperatures .active:hover {
+  color: #ffebbb;
+  cursor: default;
+}
+
 #temperatures {
   font-size: 40px;
 }
@@ -63,6 +74,7 @@ body {
   position: static;
   bottom: 0;
 }
+
 #iconsForecast {
   margin: 20px 0px;
   font-size: 30px;
