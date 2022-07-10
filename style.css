@@ -24,7 +24,7 @@ body {
   border-radius: 10px;
   border: grey 0.1mm thin;
 }
-#location {
+#current-location-button {
   font-size: 15px;
   border: none;
   padding: 0;
