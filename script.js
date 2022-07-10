@@ -46,6 +46,12 @@ function displayWeatherConditions(response) {
   );
 
   celsiusTemperature = Math.round(response.data.main.temp);
+
+  let iconElement = document.querySelector("#liveIcon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function submitForm(event) {
