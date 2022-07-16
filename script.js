@@ -24,7 +24,8 @@ function formatDate(currentDate) {
 let today = document.querySelector("#today");
 today.innerHTML = `${day} ${hours}:${minutes}`;
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat"];
