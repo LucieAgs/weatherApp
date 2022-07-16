@@ -68,7 +68,10 @@ body {
   font-size: 18px;
   padding-bottom: 25px;
 }
-#temperatureForecast {
+.weekForecast {
+  width: 100px;
+}
+/* #temperatureForecast {
   margin: 20px 0px;
   font-size: 18px;
   position: static;
@@ -83,7 +86,7 @@ body {
   text-align: center;
   margin: 10px 0px;
   font-size: 18px;
-}
+} */
 footer {
   bottom: 0;
   position: fixed;
