@@ -93,8 +93,6 @@ function displayWeatherConditions(response) {
     response.data.main.feels_like
   );
 
-  celsiusTemperature = Math.round(response.data.main.temp);
-
   let iconElement = document.querySelector("#liveIcon");
   iconElement.setAttribute(
     "src",
@@ -130,35 +128,10 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function showFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#liveTemperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  liveTemperature.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function showCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#liveTemperature");
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  temperatureElement.innerHTML = celsiusTemperature;
-}
-
-let celsiusTemperature = null;
-
 let searchForm = document.querySelector("#citySubmit");
 searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemperature);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 searchCity("New York");

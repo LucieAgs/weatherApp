@@ -4,6 +4,7 @@ body {
   margin: 10px;
   background-color: #e3f6f5;
 }
+
 .card {
   border: none;
   position: absolute;
@@ -24,6 +25,7 @@ body {
   border-radius: 10px;
   border: grey 0.1mm thin;
 }
+
 #current-location-button {
   font-size: 15px;
   border: none;
@@ -34,26 +36,9 @@ body {
   font-size: 20px;
   padding-right: 20px;
 }
+
 #icon {
   font-size: 70px;
-}
-.links {
-  text-decoration: none;
-  color: white;
-}
-.links:hover {
-  color: #ffebbb;
-  transition: 2ms ease-in-out;
-}
-
-#temperatures .active {
-  color: #ffebbb;
-  cursor: default;
-}
-
-#temperatures .active:hover {
-  color: #ffebbb;
-  cursor: default;
 }
 
 #temperatures {
@@ -64,29 +49,18 @@ body {
   font-size: 40px;
   margin: 10px;
 }
+
 #today {
   font-size: 18px;
   padding-bottom: 25px;
 }
+
 .weekForecast {
   width: 100px;
-}
-/* #temperatureForecast {
-  margin: 20px 0px;
-  font-size: 18px;
-  position: static;
-  bottom: 0;
+  margin-top: 20px;
+  text-align: center;
 }
 
-#iconsForecast {
-  margin: 20px 0px;
-  font-size: 30px;
-}
-#daysForecast {
-  text-align: center;
-  margin: 10px 0px;
-  font-size: 18px;
-} */
 footer {
   bottom: 0;
   position: fixed;
