@@ -43,22 +43,42 @@ body {
 
 #temperatures {
   font-size: 40px;
+  color: rgb(21, 121, 187);
 }
 
 #city {
   font-size: 40px;
   margin: 10px;
+  color: rgb(21, 121, 187);
 }
 
 #today {
-  font-size: 18px;
+  font-size: 20px;
   padding-bottom: 25px;
+}
+
+#temperatureForecast {
+  margin: 40px 0px;
+  font-size: 20px;
+  position: static;
+  bottom: 0;
 }
 
 .weekForecast {
   width: 100px;
-  margin-top: 20px;
+  margin-top: 40px;
   text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 18px;
+  color: rgb(21, 121, 187);
+}
+
+.weather-forecast-temperature-min {
+  font-size: 16px;
+  opacity: 0.5;
+  color: rgb(21, 121, 187);
 }
 
 footer {
@@ -67,11 +87,8 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   font-size: 11px;
-}
-
-.footer {
   height: 100px;
-  margin: auto;
+  margin: 0 auto;
   width: 400px;
   text-align: center;
   padding: 10px;
